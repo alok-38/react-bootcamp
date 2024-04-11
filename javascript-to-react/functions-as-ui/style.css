@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#app {
+    max-width: 50%;
+    margin: auto;
+}
+
+button {
+    background-color: orange;
+    color: #ffffff;
+    padding: 10px 45px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+
+button:hover,
+button:focus {
+    background-color: rgb(247, 188, 79);
+}
