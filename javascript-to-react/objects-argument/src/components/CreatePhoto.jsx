@@ -1,6 +1,6 @@
 function CreatePhoto(props) {
     return (
-        <img src={props.src} width={props.width} />
+        <img className="block mx-auto" src={props.src} width={props.width} />
     );
 }
 

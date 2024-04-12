@@ -8,10 +8,10 @@ function App() {
     };
     
     return (
-        <>
+        <div className="max-w-2xl ml-96">
             <CreateProfile />
             <CreatePhoto src={photoProps.src} width={photoProps.width} />
-        </>
+        </div>
     );
 }
 
