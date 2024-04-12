@@ -1,0 +1,16 @@
+.arrow {
+  display: inline-block;
+}
+
+.arrow:hover {
+  animation: arrowAnimation 1s infinite alternate; /* Change animation speed and type as needed */
+}
+
+@keyframes arrowAnimation {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(10px); /* Adjust the distance as needed */
+  }
+}
