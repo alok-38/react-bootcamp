@@ -9,3 +9,9 @@ function MyApp() {
 
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = MyApp();
+
+const isAuth = true; // Set this to true for an authenticated user, false otherwise
+
+const message = isAuth ? "auth user content" : "log in here";
+
+console.log(message);
