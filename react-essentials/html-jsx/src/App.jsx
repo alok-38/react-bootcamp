@@ -1,14 +1,7 @@
-import Pricing from "./components/Pricing";
-import './App.css';
+import Header from './components/Header'
 
-function App() {
+export default function App() {
   return (
-    <div className="flex justify-center items-center h-screen max-w-96 mx-auto">
-      <div className="p-10 leading-10 bg-gradient-to-r from-purple-500 to-pink-500">
-        <Pricing />
-      </div>
-    </div>
+    <Header />
   );
 }
-
-export default App;
