@@ -14,7 +14,7 @@ export default function Banner() {
 				<div className="flex-shrink-0">{bannerData.icon}</div>
 				<div className="banner-content ml-2"> {/* Added ml-2 for margin */}
 					<p className="banner-text">
-						A new software update is available. See what’s new in version {bannerData.version}.
+						A new software update is available. See what's new in version {bannerData.version}.
 					</p>
 					<p className="banner-details">
 						<a href={bannerData.href} className="banner-details-link">
