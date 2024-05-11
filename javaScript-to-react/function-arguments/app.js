@@ -1,28 +1,20 @@
-const { useState } = React;
-
-function createButton(firstWord) {
-  return <button>{firstWord} Video</button>;
+// Function to create the button element
+function createButton(firstWord, restOfText) {
+  const button = document.createElement("button");
+  button.textContent = `${firstWord} ${restOfText}`;
+  button.addEventListener("click", function () {
+    toggleButton(button);
+  });
+  return button;
 }
 
-function App() {
-  const [firstWord, setFirstWord] = useState("Like");
-
-  const handleClick = () => {
-    if (firstWord === "Like") {
-      setFirstWord("Love");
-    } else {
-      setFirstWord("Like");
-    }
-  };
-
-  return (
-    <div>
-      {createButton(firstWord)}
-      <button onClick={handleClick}>Toggle First Word</button>
-    </div>
-  );
+// Function to toggle text
+function toggleButton(button) {
+  const currentText = button.textContent;
+  const newText = currentText.startsWith("Like") ? "Dislike" : "Like";
+  button.textContent = newText + currentText.substring(currentText.indexOf(" ")); // Preserve the rest of the text
 }
 
-const appRoot = document.getElementById("app");
-const root = ReactDOM.createRoot(appRoot);
-root.render(<App />);
+// App initialization
+const app = document.getElementById("app");
+app.appendChild(createButton("Dislike", "Video"));
